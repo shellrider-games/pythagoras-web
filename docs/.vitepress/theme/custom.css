@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+@font-face {
+  font-family: 'Horizon';
+  src: url('/fonts/Horizon.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.VPHero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                    url('/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 24px;
+  
+  /* Remove any overflow that might hide the padding */
+  overflow: hidden; 
+}
+
+/* This is the magic part */
+.VPHero .container {
+  /* Reset the default centering */
+  margin: 0 !important;
+  max-width: none !important;
+  
+  /* Apply your left spacing here */
+  padding-left: 60px !important; 
+  
+  /* Ensure the container takes up the full width of the parent */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.VPHero .main {
+  /* Ensure the text block itself is aligned left */
+  margin-left: 0 !important;
+  text-align: left;
+}
+
+
+.VPHero .name, 
+.VPHero .text, 
+.VPHero .tagline {
+  color: white !important;
+  padding: 12px;
+}
+
+.VPHero .name {
+  font-family: 'Horizon', sans-serif;
+}
+
+.VPHero .tagline {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --vp-font-family-base: 'Horizon', sans-serif !important;
+}
+
+/* Targets the inner wrapper of the Navbar */
+.VPNavBar .container {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 32px !important; /* Adjust 32px to your liking for a small gap from the edge */
+}
+
+/* Ensure the title/logo section doesn't have a fixed max-width */
+.VPNavBar .title {
+  flex-shrink: 0;
+  max-width: none !important;
+}
+
+/* This helps the search and links stay on the right while the logo stays left */
+.VPNavBar .content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.VPNavBar .logo {
+  height: 96px; /* Adjust as needed */
+  transition: transform 0.2s ease;
+  margin-top: 22px;
+}
+
+/* Optional: Add a hover effect to your logo */
+.VPNavBar .logo:hover {
+  transform: scale(1.05);
+}
+	

@@ -6,7 +6,7 @@ export default defineConfig({
   title: 'Pythagoras',
   description: 'First Person Puzzle game about triangles in space',
   themeConfig : {
-    logo: '/logo.png',
+    logo: 'logo.png',
     siteTitle: false
   }
 })

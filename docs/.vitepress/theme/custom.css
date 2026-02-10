@@ -88,13 +88,41 @@
 }
 
 .VPNavBar .logo {
+  cursor: default !important;
   height: 96px; /* Adjust as needed */
-  transition: transform 0.2s ease;
   margin-top: 22px;
 }
 
-/* Optional: Add a hover effect to your logo */
-.VPNavBar .logo:hover {
-  transform: scale(1.05);
+@media (max-width: 640px) {
+  .VPHero .name {
+    /* Reduce the font size */
+    font-size: 32px !important; 
+    
+    /* Ensure long words wrap if necessary */
+    word-break: break-word;
+    
+    /* Reduce the padding you added earlier so it doesn't push text off-screen */
+    padding-left: 0px !important;
+  }
+
+  .VPHero .text {
+    font-size: 24px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 16px !important;
+  }
+
+  /* Adjust the container padding for mobile so text isn't stuck to the edge */
+  .VPHero .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
-	
+
+/* Tablet Styles (Optional - for screens between 640px and 960px) */
+@media (min-width: 641px) and (max-width: 960px) {
+  .VPHero .name {
+    font-size: 48px !important;
+  }
+}
